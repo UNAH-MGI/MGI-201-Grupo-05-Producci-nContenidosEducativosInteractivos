@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IA Educativa Interactiva - GPT</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  
+</head>
+<body>
+
+<header>
+  <h1>📘 IA Educativa Interactiva</h1>
+  <p>Aplicación con Inteligencia Artificial para la Generación de Contenidos Educativos en Educación Básica</p>
+</header>
+
+<main>
+  <div class="card">
+    <h2>🧠 Generador de Actividades con GPT</h2>
+    <label for="tema">Tema:</label>
+    <input type="text" id="tema" placeholder="Ej: El agua, sistema solar, fracciones...">
+
+    <label for="nivel">Nivel educativo:</label>
+    <select id="nivel">
+      <option value="1er grado">1er grado</option>
+      <option value="2do grado">2do grado</option>
+      <option value="3er grado">3er grado</option>
+      <option value="4to grado">4to grado</option>
+      <option value="5to grado">5to grado</option>
+      <option value="6to grado">6to grado</option>
+    </select>
+
+    <label for="tipo">Tipo de contenido:</label>
+    <select id="tipo">
+      <option value="explicacion">Explicación interactiva</option>
+      <option value="preguntas">Preguntas y respuestas</option>
+      <option value="actividad">Actividad para el estudiante</option>
+    </select>
+
+    <button onclick="generarContenido()"> Generar contenido</button>
+    <div id="resultado" class="output"></div>
+  </div>
+
+<!-- Botones adicionales -->
+<div style="margin-top: 10px;">
+  <button onclick="copiarContenido()">📋 Copiar contenido</button>
+  <button onclick="descargarPDF()">📄 Descargar PDF</button>
+  <button onclick="descargarWord()">📝 Descargar Word</button>
+</div>
+
+
+
+
+    </main>
+
+        <script src="js/funciones.js"></script>
+
+      <!-- Librerías necesarias para descargar PDF y Word -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://unpkg.com/docx@7.7.0/build/index.js"></script>
+  </body>
+</html>
